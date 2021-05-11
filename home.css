@@ -1,0 +1,36 @@
+nav {
+  background: #7209b7;
+  color: #ffff;
+}
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #e2edff;
+}
+
+#projects {
+  background-color: #e2edff;
+}
+section {
+  padding-top: 5rem;
+}
+footer {
+  background: #7209b7;
+}
+.form {
+  background-color: #e2edff;
+}
+/* anggota */
+.nav-link:hover {
+  background-color: gray;
+}
+.display-4 {
+  font-weight: bold;
+}
+.card-body-icon {
+  position: absolute;
+  z-index: 0;
+  top: 25px;
+  right: 4px;
+  opacity: 0.4;
+  font-size: 90px;
+}
