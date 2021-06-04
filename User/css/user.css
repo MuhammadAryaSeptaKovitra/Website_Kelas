@@ -1,0 +1,60 @@
+/*#profil & offer*/
+#profil {
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 120px;
+}
+.profil button {
+  margin: 30px 0;
+}
+.profil-left-col {
+  flex-basis: 50%;
+}
+.profil-left-col img {
+  width: 70%;
+  margin-left: 40px;
+}
+.profil-right-col {
+  flex-basis: 50%;
+  text-align: center;
+}
+.profil-text {
+  max-width: 500px;
+  margin-right: 100px;
+  display: inline-block;
+}
+
+.profil-text h2 {
+  margin: 50px 0 10px;
+  font-size: 28px;
+  font-size: italic;
+}
+.profil-text h3 {
+  font-size: 20px;
+  font-size: italic;
+  color: #797979;
+}
+.common-btn {
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 770px) {
+  #header {
+    background: none;
+  }
+  .offer {
+    margin-top: -100px;
+  }
+  .profil-left-col,
+  .profil-right-col {
+    flex-basis: 100%;
+  }
+  .profil-text {
+    margin: 50px 50px 0;
+    display: inline-block;
+  }
+  .profil-text h2 {
+    font-size: 18px;
+  }
+}
