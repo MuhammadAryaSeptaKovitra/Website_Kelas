@@ -25,8 +25,9 @@ if(isset ($_POST["submit"])){
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../css/form.css"?version=<?=filemtime('../css/form.css');?>>
+    <link rel="stylesheet" href="../css/form.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrasi Form</title>
   </head>
   <body>
   <div class="container">
@@ -65,10 +66,6 @@ if(isset ($_POST["submit"])){
                 <option value="KOMSTAT">Komputasi Statistik</option>
                 <option value="STRUKDAT">Struktur Data</option>
               </select>
-            </div>
-            <div class="input-box">
-              <span class="details">Alasan Bergabung</span>
-              <textarea name="alasan" id="alasan" cols="50" rows="4"></textarea>
             </div>
           </div>
           <div class="gender-details">

@@ -32,6 +32,7 @@ if(isset ($_POST["submit"])){
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../css/tambah.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Event</title>
   </head>
   <body>
   <div class="container">

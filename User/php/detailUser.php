@@ -19,25 +19,16 @@ $anggota = query("SELECT * FROM anggota WHERE id =$id")[0];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/layout.css"<?=time(); ?>>
-    <link rel="stylesheet" href="../css/user.css"<?=time(); ?>>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/detailUser.css">
     <title>Document</title>
 </head>
-<style>
-body{
-  background-color: #e2edff;
-}
-  .wrap{
-    margin-left: 150px;
-    
-  }
-
-</style>
 <body >
 <!-- Navbar -->
 <nav class="menu">
       <div class="menu-toggle">
-        <input type="checkbox" name="" id="" />
+        <input type="checkbox" name="menu" id="menu" />
         <span></span>
         <span></span>
         <span></span>
@@ -55,7 +46,7 @@ body{
 <!-- Profil -->
 <section  id="profil">
       <div class="profil-left-col">
-        <img src="../img/anggota/<?=$anggota["gambar"]  ?>" alt="" />
+        <img src="../img/anggota/<?=$anggota["gambar"]  ?>" alt="gambar" />
       </div>
       <div class="profil-right-col">
         <div class="profil-text">

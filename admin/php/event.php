@@ -54,7 +54,7 @@ if(isset($_POST["cari"])){
         <div class="main__container">
           <h2>Daftar Event</h2>
           <!-- MAIN TITLE STARTS HERE -->
-          <form action="" method="post">
+          <form action="#" method="post">
                 <input type="text" name="keyword" size="30" autofocus placeholder="masukkan keyword Pencarian..." autocomplete="off" id="keyword">
                 <button type="submit" name="cari" id="tombol-cari">CARI!</button>
           </form>
@@ -120,6 +120,10 @@ if(isset($_POST["cari"])){
           <i class="fa fa-calendar fa-2x text-white"></i>
             <a href="Event.php">Daftar Event</a>
           </div>
+          <div class="sidebar__link">
+            <i class="fa fa-plus fa-2x text-white"></i>
+            <a href="formAdmin.php">Tambah Admin</a>
+          </div>
           <div class="sidebar__logout">
             <i class="fa fa-power-off"></i>
             <a href="logout.php">Log out</a>
@@ -127,7 +131,6 @@ if(isset($_POST["cari"])){
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="../script/script.js"></script>
     <script src="../script/searchEvent.js"></script>
 

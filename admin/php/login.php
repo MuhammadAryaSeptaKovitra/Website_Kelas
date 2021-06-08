@@ -80,7 +80,7 @@ if( isset($_POST["login"])){
                 <p style="color: red;"> Username / password Salah</p>
             <?php  endif; ?>
 
-          <form action="" method="POST">
+          <form action="#" method="POST">
             <div class="inputBx">
               <span>Username</span>
               <input type="text" name="username" />
@@ -90,14 +90,14 @@ if( isset($_POST["login"])){
               <input type="password" name="password" />
             </div>
             <div class="remember">
-              <label for=""> <input type="checkbox" name="remember" />remember me</label>
+              <input type="checkbox" name="remember" /> Remember me
             </div>
             <div class="inputBx">
               <input type="submit" value="Sign in" name="login" />
             </div>
-            <div class="inputBx">
+            <!-- <div class="inputBx">
               <p>Daftar Akun Admin: <a href="formAdmin.php">Sign-Up</a></p>
-            </div>
+            </div> -->
           </form>
         
         </div>

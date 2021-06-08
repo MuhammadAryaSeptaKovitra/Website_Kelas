@@ -36,7 +36,7 @@ if(isset ($_POST["submit"])){
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../css/form.css"<?=time(); ?> />
+    <link rel="stylesheet" href="../css/form.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
   <body>
@@ -63,24 +63,27 @@ if(isset ($_POST["submit"])){
             <div class="input-box">
               <span class="details">Mata Kuliah Favorite</span>
               <select name="matkul_fav" id="matkul_fav">
-                <option value="<?=$anggota["matkul_fav"];?>"><?= $anggota["matkul_fav"];?></option>
-                <option value="PTI" >Pengantar Teknologi Informasi</option>
-                <option value="PBW">Website</option>
+                <option value="" <?php if($anggota["matkul_fav"]=="") echo "selected";?>>Pilih Mata Kuliah</option>
+                <option value="PTI" <?php if($anggota["matkul_fav"]=="PTI") echo "selected"; ?>>Pengantar Teknologi Informasi</option>
+                <option value="PBW"<?php if($anggota["matkul_fav"]=="PBW") echo "selected"; ?>>Pemrograman Berbasis Web</option>
+                <option value="PBO"<?php if($anggota["matkul_fav"]=="PBO") echo "selected"; ?>>Pemrograman Berbasis Object</option>
+                <option value="KOMSTAT"<?php if($anggota["matkul_fav"]=="KOMSTAT") echo "selected"; ?>>Komputasi Statistik</option>
+                <option value="STRUKDAT"<?php if($anggota["matkul_fav"]=="STRUKDAT") echo "selected"; ?>>Struktur Data</option>
               </select>
             </div>
           </div>
           <div class="gender-details">
-            <input type="radio" name="jenis_kelamin" id="dot-1" value="Laki-Laki" <?php if($anggota["jenis_kelamin"]=="Laki-laki") echo "checked";?> />
+            <input type="radio" name="jenis_kelamin" id="dot-1" value="Laki-Laki" <?php if($anggota["jenis_kelamin"]=="Laki-Laki") echo "checked";?> />
             <input type="radio" name="jenis_kelamin" id="dot-2" value="Perempuan" <?php if($anggota["jenis_kelamin"]=="Perempuan") echo "checked";?> />
-            <span class="gender-title">Gender</span>
+            <span class="gender-title">Jenis Kelamin</span>
             <div class="category">
               <label for="dot-1">
                 <span class="dot one"></span>
-                <span class="gender">Male</span>
+                <span class="gender">Laki-Laki</span>
               </label>
               <label for="dot-2">
                 <span class="dot two"></span>
-                <span class="gender">Female</span>
+                <span class="gender">Perempuan</span>
               </label>
             </div>
           </div>

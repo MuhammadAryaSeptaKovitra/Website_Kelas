@@ -22,21 +22,29 @@ $prov = json_decode(file_get_contents('https://api.kawalcorona.com/indonesia/pro
 <link rel="stylesheet" href="../css/layout.css">
 <link rel="stylesheet" href="../css/anggota.css">
 <link rel="stylesheet" href="../css/berita.css">
+<style>
+ /* css ketika halaman di print */
+ @media print{
+            .main__cards,.menu-list,.social-icons,footer {
+                display: none;
+            }
+}
+</style>
 <title>Berita</title>
 <body>
 <!-- social icons -->
 <div class="social-icons">
-<img src="../img/layout/instagram.png" alt="" srcset="">
-<img src="../img/layout/twitter.png" alt="" srcset="">
-<img src="../img/layout/linkedin.png" alt="" srcset="">
-<img src="../img/layout/facebook.png" alt="" srcset="">
+<img src="../img/layout/instagram.png" alt="ig" >
+<img src="../img/layout/twitter.png" alt="twit" >
+<img src="../img/layout/linkedin.png" alt="linked" >
+<img src="../img/layout/facebook.png" alt="fb" >
 </div> 
 <!-- table -->
 <div class="table_responsive">
 <!-- Navbar -->
 <nav class="menu">
 <div class="menu-toggle">
-<input type="checkbox" name="" id="" />
+<input type="checkbox" name="menu" id="menu" />
 <span></span>
 <span></span>
 <span></span>
@@ -51,65 +59,70 @@ $prov = json_decode(file_get_contents('https://api.kawalcorona.com/indonesia/pro
 </ul>
 </nav>
 <!-- MAIN CARDS STARTS HERE -->
-<h1>Jumlah Covid-19 di Indonesia</h1>
-<div class="main__cards">
-        <div class="card">
-            <i class="fas fa-users fa-2x text-pink" aria-hidden="true"></i>
-            <div class="card_inner">
-            <p class="text-primary-p"> Total Positif:</p>
-            <span class="font-bold text-title"><?=$indo['0']['positif'];?></span>
+
+    <h1 >Berita Covid-19 Di Indonesia</h1>
+    <div class="main__cards">
+            <div class="card">
+                <i class="fas fa-users fa-2x text-pink" aria-hidden="true"></i>
+                <div class="card_inner">
+                <p class="text-primary-p"> Total Positif:</p>
+                <span class="font-bold text-title"><?=$indo['0']['positif'];?></span>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <i class="fa fa-calendar fa-2x text-pink" aria-hidden="true"></i>
-            <div class="card_inner">
-            <p class="text-primary-p">Total Sembuh:</p>
-            <span class="font-bold text-title"><?=$indo['0']['sembuh'];?></span>
+            <div class="card">
+                <i class="fa fa-calendar fa-2x text-pink" aria-hidden="true"></i>
+                <div class="card_inner">
+                <p class="text-primary-p">Total Sembuh:</p>
+                <span class="font-bold text-title"><?=$indo['0']['sembuh'];?></span>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <i class="fa fa-calendar fa-2x text-pink" aria-hidden="true"></i>
-            <div class="card_inner">
-            <p class="text-primary-p">Total Dirawat:</p>
-            <span class="font-bold text-title"><?=$indo['0']['dirawat'];?></span>
+            <div class="card">
+                <i class="fa fa-calendar fa-2x text-pink" aria-hidden="true"></i>
+                <div class="card_inner">
+                <p class="text-primary-p">Total Dirawat:</p>
+                <span class="font-bold text-title"><?=$indo['0']['dirawat'];?></span>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <i class="fa fa-calendar fa-2x text-pink" aria-hidden="true"></i>
-            <div class="card_inner">
-            <p class="text-primary-p">Total Meninggal</p>
-            <span class="font-bold text-title"><?=$indo['0']['meninggal'];?></span>
+            <div class="card">
+                <i class="fa fa-calendar fa-2x text-pink" aria-hidden="true"></i>
+                <div class="card_inner">
+                <p class="text-primary-p">Total Meninggal</p>
+                <span class="font-bold text-title"><?=$indo['0']['meninggal'];?></span>
+                </div>
             </div>
-        </div>
-</div>
-        <!-- MAIN CARDS ENDS HERE -->
-<br><br>
+    </div>
+            <!-- MAIN CARDS ENDS HERE -->
+    <br><br>
 <div id="container">
-<table>
-<thead>
-<tr>
-    <th class="text-center">No</th>
-    <th class="text-center">Provinsi</th>
-    <th class="text-center">Positif</th>
-    <th class="text-center">Sembuh</th>
-    <th class="text-center">Meninggal</th>
-</tr>
-</thead>
-
-<tbody>
-    <?php $no=1; foreach($prov as $key) :?>
-        <tr>
-            <td><?= $no++;?></td>
-            <td> <span ><?= $key["attributes"]["Provinsi"];?></span></td>
-            <td> <span class="badge badge-red "><?= $key["attributes"]["Kasus_Posi"];?></span></td>
-            <td> <span class="badge badge-success"><?= $key["attributes"]["Kasus_Semb"];?></span></td>
-            <td> <span class="badge badge-danger"><?= $key["attributes"]["Kasus_Meni"];?></span></td>
-        </tr>
-    <?php endforeach; ?>
-
-</tbody>
-</table>
+    <!-- <button class="common-btn" id="download">Download PDF</button> -->
+        <br><br>
+    <div id="invoice">
+        <table >
+                <h2>Data Covid-19 Berdasarkan Provinsi</h2>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Provinsi</th>
+                    <th>Positif</th>
+                    <th>Sembuh</th>
+                    <th>Meninggal</th>
+                </tr>
+            </thead>
+            <tbody >
+                <?php $no=1; foreach($prov as $key) :?>
+                    <tr>
+                        <td><?= $no++;?></td>
+                        <td> <span ><?= $key["attributes"]["Provinsi"];?></span></td>
+                        <td> <span ><?= $key["attributes"]["Kasus_Posi"];?></span></td>
+                        <td> <span ><?= $key["attributes"]["Kasus_Semb"];?></span></td>
+                        <td> <span ><?= $key["attributes"]["Kasus_Meni"];?></span></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 </div>
+
 <!-- Footer -->
 <footer>
 <div class="container footer-row">
@@ -126,5 +139,7 @@ $prov = json_decode(file_get_contents('https://api.kawalcorona.com/indonesia/pro
 </div>
 <script src="../script/searchAnggota.js"></script>
 <script src="../script/responsive.js"></script>
+<script src="../script/print.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script> -->
 </body>
 </html>

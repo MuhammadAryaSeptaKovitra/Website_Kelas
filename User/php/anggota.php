@@ -34,24 +34,24 @@ if(isset($_POST["cari"])){
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/layout.css"?version=<?=filemtime('../css/layout.css');?>>
-    <link rel="stylesheet" href="../css/anggota.css"?version=<?=filemtime('../css/anggota.css');?> />
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/layout.css"/>
+    <link rel="stylesheet" href="../css/anggota.css" />
+    <title>Daftar Anggota</title>
   </head>
   <body>
   <!-- social icons -->
   <div class="social-icons">
-      <img src="../img/layout/instagram.png" alt="" srcset="">
-      <img src="../img/layout/twitter.png" alt="" srcset="">
-      <img src="../img/layout/linkedin.png" alt="" srcset="">
-      <img src="../img/layout/facebook.png" alt="" srcset="">
-    </div> 
+      <img src="../img/layout/instagram.png" alt="ig" >
+      <img src="../img/layout/twitter.png" alt="twit" >
+      <img src="../img/layout/linkedin.png" alt="linked" >
+      <img src="../img/layout/facebook.png" alt="fb" >
+  </div> 
     <!-- table -->
     <div class="table_responsive">
       <!-- Navbar -->
     <nav class="menu">
       <div class="menu-toggle">
-        <input type="checkbox" name="" id="" />
+        <input type="checkbox" name="menu" id="menu" />
         <span></span>
         <span></span>
         <span></span>
@@ -67,9 +67,9 @@ if(isset($_POST["cari"])){
       </ul>
     </nav>
       <h3>Daftar Anggota</h3>
-      <form action="" method="post">
-                <input type="text" name="keyword" size="30" autofocus placeholder="masukkan keyword Pencarian..." autocomplete="off" id="keyword">
-                <button type="submit" name="cari" id="tombol-cari">CARI!</button>
+      <form action="#" method="post">
+          <input type="text" name="keyword" size="30" autofocus placeholder="masukkan keyword Pencarian..." autocomplete="off" id="keyword">
+          <button type="submit" name="cari" id="tombol-cari">CARI!</button>
       </form>
       <br><br>
     <!-- Navigasi -->
@@ -94,8 +94,7 @@ if(isset($_POST["cari"])){
             <th>No</th>
             <th>Image</th>
             <th>Name</th>
-            <th>Email</th>
-          
+            <th>Email</th>         
             <th>Action</th>
           </tr>
         </thead>
@@ -105,7 +104,7 @@ if(isset($_POST["cari"])){
           <?php foreach($anggota as $row) :?>
           <tr>
             <td><?= $i; ?></td>
-            <td><img src="../img/anggota/<?=$row["gambar"]; ?>" alt="" /></td>
+            <td><img src="../img/anggota/<?=$row["gambar"]; ?>" alt="gambar" /></td>
             <td><?= $row["nama"]; ?></td>
             <td><?= $row["email"]; ?></td>
             <td>

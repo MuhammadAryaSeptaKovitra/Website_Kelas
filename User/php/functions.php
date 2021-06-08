@@ -25,7 +25,6 @@ function tambah($data){
     $is_php = isset($data["is_php"]) ? $data["is_php"] : "Tidak";  
     $is_java = isset($data["is_java"]) ? $data["is_java"] : "Tidak";  
     $is_python = isset($data["is_python"]) ? $data["is_python"] : "Tidak";  
-    $alasan = isset($data["alasan"]) ? $data["alasan"] : "";  
     $matkul_fav = isset($data["matkul_fav"]) ? $data["matkul_fav"] : "";  
     // Upload Gambar
     $gambar = upload();
@@ -57,7 +56,7 @@ function tambah($data){
     $password = password_hash($password,PASSWORD_DEFAULT);
 
 // query insert data
-$query = "INSERT INTO `anggota`  ( `nama`, `tanggal_lahir`, `email`, `password`, `jenis_kelamin`, `is_php`, `is_java`, `is_python`, `alasan`, `matkul_fav`,`gambar`) VALUES ('$nama','$tanggal_lahir','$email','$password','$jenis_kelamin','$is_php','$is_java','$is_python','$alasan','$matkul_fav','$gambar')";
+$query = "INSERT INTO `anggota`  ( `nama`, `tanggal_lahir`, `email`, `password`, `jenis_kelamin`, `is_php`, `is_java`, `is_python`, `matkul_fav`,`gambar`) VALUES ('$nama','$tanggal_lahir','$email','$password','$jenis_kelamin','$is_php','$is_java','$is_python','$matkul_fav','$gambar')";
 mysqli_query($conn,$query);
 
 return mysqli_affected_rows($conn);
@@ -125,7 +124,6 @@ function ubah($data){
     $is_php = isset($data["is_php"]) ? $data["is_php"] : "Tidak";  
     $is_java = isset($data["is_java"]) ? $data["is_java"] : "Tidak";  
     $is_python = isset($data["is_python"]) ? $data["is_python"] : "Tidak";  
-    $alasan = isset($data["alasan"]) ? $data["alasan"] : "";  
     $matkul_fav = isset($data["matkul_fav"]) ? $data["matkul_fav"] : "";  
     $gambarLama=htmlspecialchars($data["gambarLama"]);
     
@@ -145,7 +143,6 @@ function ubah($data){
             is_php  = '$is_php',
             is_java  = '$is_java',
             is_python  = '$is_python',
-            alasan  = '$alasan',
             matkul_fav  = '$matkul_fav',
             gambar = '$gambar'
         WHERE id = $id ";

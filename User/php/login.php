@@ -78,7 +78,7 @@ if( isset($_POST["login"])){
             <?php if(isset($error)) :?>
                 <p style="color: red;"> Username / password Salah</p>
             <?php  endif; ?>
-          <form action="" method="POST">
+          <form action="#" method="POST">
             <div class="inputBx">
               <span>Email</span>
               <input type="text" name="email" />
@@ -88,7 +88,7 @@ if( isset($_POST["login"])){
               <input type="password" name="password" />
             </div>
             <div class="remember">
-              <label for=""> <input type="checkbox" name="remember" />Remember Me</label>
+              <input type="checkbox" name="remember" /> Remember Me?
             </div>
             <div class="inputBx">
               <input type="submit" value="Sign in" name="login" />

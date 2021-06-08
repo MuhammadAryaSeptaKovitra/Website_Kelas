@@ -1,7 +1,6 @@
-const container = document.querySelector(".container1");
-
-const jumbo = document.querySelector(".jumbo");
-const thumbs = document.querySelectorAll(".thumb");
+var container = document.querySelector(".container1");
+var jumbo = document.querySelector(".jumbo");
+var thumbs = document.querySelectorAll(".thumb");
 
 container.addEventListener("click", function (e) {
   // cek apakah yang diclik apakah thumb

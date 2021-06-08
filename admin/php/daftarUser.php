@@ -55,7 +55,7 @@ if(isset($_POST["cari"])){
       <main>
         <div class="main__container">
         <h3>Daftar Anggota</h3>
-      <form action="" method="post">
+      <form action="#" method="post">
                 <input type="text" name="keyword" size="30" autofocus placeholder="masukkan keyword Pencarian..." autocomplete="off" id="keyword">
                 <button type="submit" name="cari" id="tombol-cari">CARI!</button>
       </form>
@@ -85,7 +85,6 @@ if(isset($_POST["cari"])){
             <th>Email</th>
             <th>Tanggal Lahir</th>
             <th>Jenis Kelamin</th>
-            <th>Alasan</th>
             <th>Matkul Favorite</th>
             <th>Action</th>
         </tr>
@@ -101,12 +100,11 @@ if(isset($_POST["cari"])){
             <td><?= $row["email"]; ?></td>
             <td><?= $row["tanggal_lahir"]; ?></td>
             <td><?= $row["jenis_kelamin"]; ?></td>
-            <td><?= $row["alasan"]; ?></td>
             <td><?= $row["matkul_fav"]; ?></td>
             <td>
               <span class="action_btn">
-                <a href="../../User/php/UpdateForm.php?id=<?= $row["id"]; ?>">Edit</a>
-                <a href="hapusUser.php?id=<?= $row["id"] ;?>">Hapus</a>
+                <a href="UpdateForm.php?id=<?= $row["id"]; ?>">Edit</a>
+                <a href="hapusUser.php?id=<?= $row["id"] ;?>" onclick="return confirm('Apakah Ingin Dihapus?')">Hapus</a>
               </span>
             </td>
           </tr>
@@ -141,6 +139,10 @@ if(isset($_POST["cari"])){
           <i class="fa fa-calendar fa-2x text-white"></i>
             <a href="event.php">Daftar Event</a>
           </div>
+          <div class="sidebar__link">
+            <i class="fa fa-plus fa-2x text-white"></i>
+            <a href="formAdmin.php">Tambah Admin</a>
+          </div>
           <div class="sidebar__logout">
             <i class="fa fa-power-off"></i>
             <a href="logout.php">Log out</a>
@@ -148,7 +150,6 @@ if(isset($_POST["cari"])){
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="../script/script.js"></script>
     <script src="../script/searchUser.js"></script>
 

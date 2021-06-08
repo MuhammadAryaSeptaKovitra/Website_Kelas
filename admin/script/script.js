@@ -55,10 +55,6 @@ var options = {
     },
   },
 };
-
-var chart = new ApexCharts(document.querySelector("#apex1"), options);
-chart.render();
-
 // Sidebar Toggle Codes;
 
 var sidebarOpen = false;

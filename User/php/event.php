@@ -32,22 +32,22 @@ $event = cari($_POST["keyword"]);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/layout.css"<?=time(); ?>>
-    <link rel="stylesheet" href="../css/event.css"<?=time(); ?>>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/event.css">
     <title>Event</title>
 </head>
 <!-- social icons -->
-<div class="social-icons">
-    <img src="../img/layout/instagram.png" alt="" srcset="">
-    <img src="../img/layout/twitter.png" alt="" srcset="">
-    <img src="../img/layout/linkedin.png" alt="" srcset="">
-    <img src="../img/layout/facebook.png" alt="" srcset="">
-</div> 
 <body>
+    <div class="social-icons">
+        <img src="../img/layout/instagram.png" alt="ig" >
+        <img src="../img/layout/twitter.png" alt="twit" >
+        <img src="../img/layout/linkedin.png" alt="linked" >
+        <img src="../img/layout/facebook.png" alt="fb" >
+    </div> 
     <!-- Navbar -->
     <nav class="menu">
     <div class="menu-toggle">
-    <input type="checkbox" name="" id="" />
+    <input type="checkbox" name="menu" id="menu" />
     <span></span>
     <span></span>
     <span></span>
@@ -64,9 +64,9 @@ $event = cari($_POST["keyword"]);
 </nav>
 <br><br>
 <h2>Daftar Event</h2>
-<form action="" method="post">
-            <input type="text" name="keyword" size="30" autofocus placeholder="masukkan keyword Pencarian..." autocomplete="off" id="keyword">
-            <button type="submit" name="cari" id="tombol-cari">CARI!</button>
+<form action="#" method="post">
+    <input type="text" name="keyword" size="30" autofocus placeholder="masukkan keyword Pencarian..." autocomplete="off" id="keyword">
+    <button type="submit" name="cari" id="tombol-cari">CARI!</button>
 </form>
 <br><br>
 <!-- Navigasi -->
@@ -85,9 +85,9 @@ $event = cari($_POST["keyword"]);
         <?php endif; ?>
         <br><br>
         <div id="container">
-        <section class="cards">
+        <aside class="cards">
             <?php foreach( $event as $row) :?>
-            <a href="hapusEvent.php?id= <?= $row["id"]; ?>"  class="card">
+            <a  class="card">
                 <div class="card__overlay">
                 <span > Read More</span>
                 </div>
@@ -101,7 +101,7 @@ $event = cari($_POST["keyword"]);
                 <div class="card__date"> <?= $row["tanggal_event"] ?></div>
             </a>
             <?php endforeach;?>
-        </section>  
+        </aside>  
         </div>
 
 

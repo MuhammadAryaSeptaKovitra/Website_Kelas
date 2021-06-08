@@ -38,6 +38,7 @@ if(isset ($_POST["submit"])){
 <meta charset="UTF-8" />
 <link rel="stylesheet" href="../css/tambah.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Update Event</title>
 </head>
 <body>
 <div class="container">
@@ -69,7 +70,7 @@ if(isset ($_POST["submit"])){
             <h5>Ukuran Maks 1 MB</h5>
         </div>
         </div>
-        <a href="hapusEvent.php?id=<?= $event["id"];  ?>">Hapus Data</a>
+        <a href="hapusEvent.php?id=<?= $event["id"];  ?>" onclick="return confirm('Apakah Ingin Dihapus?')">Hapus Data</a>
         <div class="button">
         <input type="submit" value="Update" name="submit" />
         </div>

@@ -74,6 +74,7 @@ $count2 = mysqli_num_rows($get2);
             </div>
           <!-- MAIN CARDS ENDS HERE -->
         </div>
+      </div>
       </main>
       <div id="sidebar">
         <div class="sidebar__title">
@@ -98,6 +99,10 @@ $count2 = mysqli_num_rows($get2);
             <i class="fa fa-calendar fa-2x text-white"></i>
             <a href="event.php">Daftar Event</a>
           </div>
+          <div class="sidebar__link">
+            <i class="fa fa-plus fa-2x text-white"></i>
+            <a href="formAdmin.php">Tambah Admin</a>
+          </div>
           <div class="sidebar__logout">
             <i class="fa fa-power-off"></i>
             <a href="logout.php">Log out</a>
@@ -105,7 +110,6 @@ $count2 = mysqli_num_rows($get2);
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="../script/script.js"></script>
   </body>
 </html>

@@ -2,6 +2,7 @@
 //Koneksi ke Database
 $conn = mysqli_connect("localhost", "root", "", "brogrammer");
 
+
 function query($query){
     global $conn;
     $result = mysqli_query($conn, $query);

@@ -18,15 +18,15 @@ $anggota = query("SELECT * FROM anggota WHERE id =$id_user")[0];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/layout.css"?version=<?=filemtime('../css/layout.css');?>>
-    <link rel="stylesheet" href="../css/user.css"?version=<?=filemtime('../css/user.css');?>>
+    <title>Home User</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/user.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="menu">
       <div class="menu-toggle">
-        <input type="checkbox" name="" id="" />
+        <input type="checkbox" name="menu" id="menu" />
         <span></span>
         <span></span>
         <span></span>
@@ -44,7 +44,7 @@ $anggota = query("SELECT * FROM anggota WHERE id =$id_user")[0];
     <!-- Header -->
     <header id="header">
     <div class="container">
-        <img src="../img/layout/Logo.jpg" class="logo" />
+        <img src="../img/layout/Logo.jpg" alt="logo" class="logo" />
         <div class="header-text">
         <h1>
         Selamat datang, <br>
@@ -52,7 +52,7 @@ $anggota = query("SELECT * FROM anggota WHERE id =$id_user")[0];
         </h1>
         <span class="square"></span>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nihil neque esse laudantium qui saepe? Aliquid adipisci nam doloremque amet?</p>
-        <!-- <button class="common-btn">Read-More</button> -->
+    
         <div class="line">
             <span class="line-1"></span> <br />
             <span class="line-2"></span> <br />
@@ -64,19 +64,19 @@ $anggota = query("SELECT * FROM anggota WHERE id =$id_user")[0];
 
     <!-- social icons -->
     <div class="social-icons">
-      <img src="../img/layout/instagram.png" alt="" srcset="">
-      <img src="../img/layout/twitter.png" alt="" srcset="">
-      <img src="../img/layout/linkedin.png" alt="" srcset="">
-      <img src="../img/layout/facebook.png" alt="" srcset="">
+      <img src="../img/layout/instagram.png" alt="ig" >
+      <img src="../img/layout/twitter.png" alt="twit" >
+      <img src="../img/layout/linkedin.png" alt="linked" >
+      <img src="../img/layout/facebook.png" alt="fb" >
     </div> 
     <!-- Profil -->
     <section  id="profil">
       <div class="profil-left-col">
-        <img src="../img/anggota/<?=$anggota["gambar"]  ?>" alt="" />
+        <img src="../img/anggota/<?=$anggota["gambar"]  ?>" alt="gambar" />
       </div>
       <div class="profil-right-col">
         <div class="profil-text">
-          <h1>Profil</h1>
+          <h2>Profil</h2>
           <div class="line">
             <span class="line-1"></span> <br />
             <span class="line-2"></span> <br />
@@ -105,7 +105,9 @@ $anggota = query("SELECT * FROM anggota WHERE id =$id_user")[0];
         </table>
     </div>
     <br><br>
-          <button class="common-btn"> <a href="UpdateForm.php?id= <?= $anggota["id"]; ?>">Ubah data</a> </button>
+        <ul>
+          <li class="common-btn"> <a href="UpdateForm.php?id= <?= $anggota["id"]; ?>">Ubah data</a> </li>
+        </ul>
           <div class="line">
             <span class="line-1"></span> <br />
             <span class="line-2"></span> <br />

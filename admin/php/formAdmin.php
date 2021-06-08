@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!isset($_SESSION["login"])){
+    header("Location: login.php");
+    exit;
+}
 require "functionsAdmin.php";
 // cek apakah tombol submit sudah ditekan apa belum
 if(isset ($_POST["submit"])){
@@ -8,14 +13,14 @@ if(isset ($_POST["submit"])){
         echo "
             <script>
                 alert('data Admin berhasil ditambahkan');
-                document.location.href = 'login.php';
+                document.location.href = 'dashboard.php';
             </script>
         ";
     }else{
         echo "
         <script>
             alert('data admin gagal ditambahkan');
-            document.location.href = 'login.php';
+            document.location.href = 'dashboard.php';
         </script>
     ";
     }
@@ -27,7 +32,7 @@ if(isset ($_POST["submit"])){
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../css/form.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Event|Admin</title>
+    <title>Registrasi Admin</title>
   </head>
   <body>
   <div class="container">

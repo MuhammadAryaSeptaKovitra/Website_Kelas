@@ -17,10 +17,8 @@ $anggota =query($query);
             <th>Image</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Umur</th>
             <th>Tanggal Lahir</th>
             <th>Jenis Kelamin</th>
-            <th>Alasan</th>
             <th>Matkul Favorite</th>
             <th>Action</th>
           </tr>
@@ -34,15 +32,13 @@ $anggota =query($query);
             <td><img src="../../User/img/anggota/<?=$row["gambar"]; ?>" alt="" /></td>
             <td><?= $row["nama"]; ?></td>
             <td><?= $row["email"]; ?></td>
-            <td>Umur</td>
             <td><?= $row["tanggal_lahir"]; ?></td>
             <td><?= $row["jenis_kelamin"]; ?></td>
-            <td><?= $row["alasan"]; ?></td>
             <td><?= $row["matkul_fav"]; ?></td>
             <td>
               <span class="action_btn">
-              <a href="../../User/UpdateForm.php <?= $row["id"]; ?>">Edit</a>
-                <a href="hapusUser.php?id=<?= $row["id"] ;?>">Hapus</a>
+              <a href="../php/UpdateForm.php?id=<?= $row["id"]; ?>">Edit</a>
+                <a href="../php/hapusUser.php?id=<?= $row["id"] ;?>  "onclick="return confirm('Apakah Ingin Dihapus?')">Hapus</a>
               </span>
             </td>
           </tr>

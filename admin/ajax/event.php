@@ -8,9 +8,9 @@ $query  ="SELECT * FROM `event`
 $event =query($query);
 
 ?>
- <section class="cards">
+<section class="cards">
               <?php foreach( $event as $row) :?>
-                <a href="hapusEvent.php?id= <?= $row["id"]; ?>"  class="card">
+                <a href="updateEvent.php?id= <?= $row["id"]; ?>"  class="card">
                   <div class="card__overlay">
                     <span > Read More</span>
                   </div>
@@ -22,7 +22,6 @@ $event =query($query);
                     </div>
                   </div>
                   <div class="card__date"> <?= $row["tanggal_event"] ?></div>
-                  <div class="card__readtime">5 min read</div>
                 </a>
-                <?php endforeach;?>
+              <?php endforeach;?>
 </section>  

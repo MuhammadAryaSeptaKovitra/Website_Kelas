@@ -6,7 +6,7 @@
   /* background-color: #e2edff; */
   margin-top: 20px;
 }
-#features h1 {
+#features h2 {
   text-align: center;
 }
 .feature-row {
@@ -66,7 +66,23 @@
 body {
   overflow-x: hidden;
 }
-
+#header ul {
+  list-style: none;
+  width: 50%;
+}
+#header ul li {
+  margin-left: -40px;
+}
+#Program ul {
+  list-style: none;
+  width: 50%;
+}
+#Program ul li {
+  margin-left: -40px;
+}
+#Program ul li a {
+  color: #f67c92;
+}
 .cards-wrapper {
   display: flex;
   justify-content: space-evenly;
@@ -227,7 +243,7 @@ body {
   }
   .social-icons img {
     width: 14px;
-    margin: 15 auto;
+    margin: 15px auto;
   }
   .feature-col {
     flex-basis: 100%;
@@ -255,7 +271,7 @@ body {
     right: 0;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+    background-color: #f67c92;
     z-index: 1;
     transform: translateY(-100%);
     transition: all 1s;

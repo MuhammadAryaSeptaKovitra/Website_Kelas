@@ -7,6 +7,9 @@ html {
 :before {
   box-sizing: inherit;
 }
+h2 {
+  color: #101010;
+}
 body {
   margin: 20px;
   padding: 20px;
