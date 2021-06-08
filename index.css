@@ -1,0 +1,14 @@
+body {
+  background-color: #f67c92;
+  overflow-x: hidden;
+}
+h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+img {
+  height: 250px;
+}
+th {
+  font-size: 30px;
+}
